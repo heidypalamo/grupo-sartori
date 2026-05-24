@@ -3,649 +3,273 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sartori Group — One partner. The whole chain. Run by operators.</title>
-  <meta name="description" content="A global operating group running 15+ companies across sourcing, machinery, procurement, and logistics. Built by operators, not intermediaries." />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='4' fill='%234A5238'/%3E%3Ctext x='32' y='42' font-family='Georgia' font-size='30' font-weight='500' fill='%23F2EDE3' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
+  <title>Sartori Group — Global Solutions. Real Connections.</title>
+  <meta name="description" content="Global sourcing, industrial solutions, and operational excellence. We connect businesses to the right products, equipment, and partners worldwide." />
+  <link rel="icon" href="logos/sartorigrouplogo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root{
-      /* Primary surfaces */
-      --bg-cream:#F2EDE3;
-      --bg-cream-soft:#EBE5D7;
-      --bg-white:#FAF7F0;
-      /* Brand */
+      --cream:#F2EDE3;
+      --cream-soft:#EBE5D7;
+      --cream-white:#FAF7F0;
       --sage-deep:#4A5238;
       --sage-mid:#6B7355;
-      --sage-soft:#A8AE93;
-      /* Text */
-      --ink-primary:#2A2D24;
-      --ink-secondary:#5C5E52;
+      --ink:#2A2D24;
+      --ink-soft:#5C5E52;
       --ink-muted:#8A8B7E;
-      /* Accent */
-      --accent-warm:#B8A584;
+      --accent:#B8A584;
       --line:#D9D2C3;
-      /* Type */
       --serif:'Cormorant Garamond',Georgia,serif;
       --sans:'Inter Tight',system-ui,-apple-system,sans-serif;
-      /* Motion */
-      --ease:cubic-bezier(0.22,1,0.36,1);
     }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
     body{
-      font-family:var(--sans);color:var(--ink-primary);background:var(--bg-cream);
-      line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;
+      font-family:var(--sans);color:var(--ink);background:var(--cream);
+      line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;
+      min-height:100vh;display:flex;flex-direction:column;
     }
     img{max-width:100%;display:block}
     a{color:inherit;text-decoration:none}
     button{font-family:inherit;cursor:pointer;border:none;background:none}
 
-    .wrap{
-      max-width:1240px;margin:0 auto;
-      padding-left:clamp(1.5rem,5vw,4rem);padding-right:clamp(1.5rem,5vw,4rem);
-    }
-    section{padding:clamp(4rem,8vw,7rem) 0;position:relative}
-
-    /* Reusable type ── */
-    .eyebrow{
-      font-family:var(--sans);font-weight:500;font-size:0.75rem;
-      letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-muted);
-      display:inline-block;
-    }
-    h1.hero-headline,h2.section-headline{
-      font-family:var(--serif);font-weight:400;color:var(--ink-primary);
-      letter-spacing:-0.005em;
-    }
-    h1.hero-headline{font-size:clamp(3rem,6vw,5.5rem);line-height:1.05}
-    h2.section-headline{font-size:clamp(2rem,3.5vw,3rem);line-height:1.1}
-    .subhead{font-size:clamp(1.05rem,1.4vw,1.25rem);line-height:1.55;color:var(--ink-secondary)}
-    .accent{color:var(--accent-warm);font-style:italic}
-
-    /* ── Buttons ── */
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:0.6rem;
-      padding:0.9rem 1.75rem;font-family:var(--sans);font-weight:500;
-      font-size:0.85rem;letter-spacing:0.05em;text-transform:uppercase;
-      border-radius:2px;transition:background 150ms ease,color 150ms ease,border-color 150ms ease,transform 150ms ease;
-      cursor:pointer;border:1.5px solid transparent;
-    }
-    .btn-primary{background:var(--sage-deep);color:var(--bg-cream);border-color:var(--sage-deep)}
-    .btn-primary:hover{background:#3D4530;border-color:#3D4530}
-    .btn-secondary{background:transparent;color:var(--sage-deep);border-color:var(--sage-deep)}
-    .btn-secondary:hover{background:var(--sage-deep);color:var(--bg-cream)}
-    .btn-inverted{background:var(--bg-cream);color:var(--sage-deep);border-color:var(--bg-cream)}
-    .btn-inverted:hover{background:var(--bg-white);border-color:var(--bg-white)}
-
-    /* ── World map dot pattern (used in hero + closing banner) ── */
-    .dot-pattern{
-      background-image:radial-gradient(circle,rgba(74,82,56,0.18) 1.2px,transparent 1.5px);
-      background-size:22px 22px;background-position:0 0;
-    }
-    .dot-pattern-light{
-      background-image:radial-gradient(circle,rgba(242,237,227,0.22) 1.2px,transparent 1.5px);
-      background-size:22px 22px;
-    }
-
-    /* ══════════════ HEADER ══════════════ */
-    header.site{
+    /* ══════════════ NAV ══════════════ */
+    nav.top{
       position:fixed;top:0;left:0;right:0;z-index:50;
-      background:transparent;transition:background 280ms ease,border-color 280ms ease,box-shadow 280ms ease;
-      border-bottom:1px solid transparent;
-    }
-    header.site.scrolled{
-      background:rgba(242,237,227,0.94);
-      backdrop-filter:saturate(160%) blur(14px);
-      -webkit-backdrop-filter:saturate(160%) blur(14px);
-      border-bottom-color:var(--line);
-    }
-    .header-inner{
+      padding:18px clamp(20px,3vw,40px);
       display:flex;align-items:center;justify-content:space-between;
-      max-width:1240px;margin:0 auto;
-      padding:1.2rem clamp(1.5rem,5vw,4rem);
-      gap:2rem;
+      background:rgba(242,237,227,0);
+      transition:background 0.3s ease,box-shadow 0.3s ease;
     }
-    .logo-lockup{display:flex;align-items:center}
-    /* Logo image — transparent PNG, no blend needed */
-    .logo-img{
-      height:72px;width:auto;display:block;
-      transition:opacity 150ms ease;
+    nav.top.scrolled{
+      background:rgba(242,237,227,0.94);
+      backdrop-filter:saturate(160%) blur(12px);
+      -webkit-backdrop-filter:saturate(160%) blur(12px);
+      box-shadow:0 1px 0 var(--line);
     }
-    .logo-lockup:hover .logo-img{opacity:0.85}
-    @media(max-width:640px){.logo-img{height:60px}}
-    nav.primary{display:flex;align-items:center;gap:2rem}
-    nav.primary a{
-      font-family:var(--sans);font-weight:500;font-size:0.75rem;
-      letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-primary);
-      transition:color 150ms ease;
-    }
-    nav.primary a:hover{color:var(--sage-deep)}
+    .nav-logo{display:flex;align-items:center;gap:10px;transition:opacity 0.2s ease}
+    .nav-logo:hover{opacity:0.8}
+    .nav-logo img{height:44px;width:auto}
+    @media(max-width:640px){.nav-logo img{height:36px}}
     .backoffice{
       display:inline-flex;align-items:center;gap:0.45rem;
-      padding:0.55rem 1rem;border:1px solid var(--sage-deep);
-      font-family:var(--sans);font-weight:500;font-size:0.7rem;
+      padding:9px 18px;border:1px solid var(--sage-deep);
+      font-family:var(--sans);font-weight:500;font-size:11px;
       letter-spacing:0.16em;text-transform:uppercase;color:var(--sage-deep);
       border-radius:2px;transition:background 150ms ease,color 150ms ease;
     }
-    .backoffice:hover{background:var(--sage-deep);color:var(--bg-cream)}
+    .backoffice:hover{background:var(--sage-deep);color:var(--cream)}
     .backoffice svg{width:11px;height:11px}
-    .menu-btn{display:none;background:none;border:none;color:var(--ink-primary);font-size:24px;padding:0.25rem}
-    @media(max-width:980px){
-      nav.primary{display:none}
-      .menu-btn{display:block}
-      header.site.menu-open{background:rgba(242,237,227,0.98);backdrop-filter:saturate(160%) blur(14px)}
-      header.site.menu-open nav.primary{
-        display:flex;position:absolute;top:100%;left:0;right:0;
-        flex-direction:column;padding:1.5rem clamp(1.5rem,5vw,4rem);
-        background:var(--bg-cream);gap:1.25rem;border-top:1px solid var(--line);
-      }
-      header.site.menu-open .backoffice{display:none}
-    }
+    @media(max-width:480px){.backoffice span{display:none}.backoffice{padding:9px 11px}}
 
-    /* ══════════════ SECTION 1 — HERO ══════════════ */
+    /* ══════════════ HERO ══════════════ */
     .hero{
-      min-height:100vh;padding-top:120px;padding-bottom:80px;
-      display:flex;align-items:center;position:relative;overflow:hidden;
+      flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+      padding:120px clamp(22px,4vw,40px) 60px;
+      text-align:center;position:relative;
     }
-    .hero-bg{
-      position:absolute;inset:0;z-index:1;
-      background:
-        linear-gradient(110deg,rgba(242,237,227,0.92) 0%,rgba(242,237,227,0.55) 55%,rgba(242,237,227,0.20) 100%),
-        linear-gradient(180deg,#C8C2B0 0%,#A8A595 100%);
+    .hero h1{
+      font-family:var(--serif);font-weight:500;color:var(--ink);
+      font-size:clamp(2.4rem,5.6vw,4.6rem);line-height:1.05;letter-spacing:-0.008em;
+      max-width:820px;margin-bottom:22px;
+      animation:fadeUp 1s ease both;
     }
-    .hero-bg::before{
-      content:'';position:absolute;inset:0;
-      background-image:radial-gradient(circle,rgba(74,82,56,0.20) 1.5px,transparent 2px);
-      background-size:26px 26px;
-      mask-image:linear-gradient(180deg,#000 0%,#000 50%,transparent 100%);
-      -webkit-mask-image:linear-gradient(180deg,#000 0%,#000 50%,transparent 100%);
+    .hero h1 .line{display:block}
+    .hero .divider{
+      width:64px;height:1.5px;background:var(--accent);margin:16px auto 24px;
+      animation:fadeUp 1s 0.15s ease both;
     }
-    .hero-inner{position:relative;z-index:2;width:100%}
-    .hero-text{max-width:640px}
-    .hero h1{margin-bottom:1.5rem}
-    .hero .subhead{max-width:520px;margin-bottom:2.25rem}
-    .hero-buttons{display:flex;gap:0.875rem;flex-wrap:wrap}
-    /* word-by-word reveal */
-    .hero h1 .word{
-      display:inline-block;opacity:0;transform:translateY(8px);
-      transition:opacity 600ms var(--ease),transform 600ms var(--ease);
+    .hero .eyebrow{
+      font-family:var(--sans);font-weight:500;font-size:0.78rem;
+      letter-spacing:0.24em;text-transform:uppercase;color:var(--ink-soft);
+      margin-bottom:20px;line-height:1.65;max-width:600px;
+      animation:fadeUp 1s 0.25s ease both;
     }
-    .hero.loaded h1 .word{opacity:1;transform:translateY(0)}
-    .hero .subhead,.hero .hero-buttons{opacity:0;transform:translateY(8px);transition:opacity 600ms var(--ease),transform 600ms var(--ease)}
-    .hero.loaded .subhead{opacity:1;transform:translateY(0);transition-delay:200ms}
-    .hero.loaded .hero-buttons{opacity:1;transform:translateY(0);transition-delay:400ms}
+    .hero .lede{
+      font-family:var(--sans);font-weight:400;font-size:clamp(15px,1.2vw,17px);
+      color:var(--ink-soft);line-height:1.6;max-width:540px;margin-bottom:56px;
+      animation:fadeUp 1s 0.35s ease both;
+    }
 
-    /* ══════════════ SECTION 2 — PROOF STRIP ══════════════ */
-    .proof{background:var(--bg-cream-soft);padding:4rem 0}
-    .proof-grid{
+    /* ── Capability tiles ── */
+    .caps{
       display:grid;grid-template-columns:repeat(4,1fr);gap:0;
-      max-width:1080px;margin:0 auto;
+      max-width:920px;width:100%;
+      animation:fadeUp 1s 0.45s ease both;
     }
-    .proof-cell{
-      text-align:center;padding:1rem 1.5rem;
+    .cap{
+      padding:0 22px;text-align:center;
       border-right:1px solid var(--line);
+      display:flex;flex-direction:column;align-items:center;gap:12px;
     }
-    .proof-cell:last-child{border-right:none}
-    .proof-num{
-      font-family:var(--serif);font-weight:500;font-size:clamp(2.5rem,4vw,3.5rem);
-      color:var(--sage-deep);line-height:1;margin-bottom:0.85rem;letter-spacing:-0.01em;
+    .cap:last-child{border-right:none}
+    .cap-icon{
+      width:42px;height:42px;
+      display:inline-flex;align-items:center;justify-content:center;color:var(--sage-deep);
     }
-    .proof-label{
-      font-family:var(--sans);font-weight:500;font-size:0.7rem;
-      letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-muted);line-height:1.5;
+    .cap-icon svg{width:26px;height:26px}
+    .cap-title{
+      font-family:var(--sans);font-weight:600;font-size:11px;
+      letter-spacing:0.18em;text-transform:uppercase;color:var(--ink);
+      line-height:1.4;min-height:32px;display:flex;align-items:center;justify-content:center;
     }
-    .proof-caption{
-      text-align:center;margin-top:2.5rem;
-      font-family:var(--serif);font-style:italic;font-weight:400;
-      font-size:1rem;color:var(--ink-muted);
+    .cap-desc{
+      font-family:var(--sans);font-weight:400;font-size:12.5px;
+      color:var(--ink-muted);line-height:1.5;
     }
-    @media(max-width:760px){
-      .proof-grid{grid-template-columns:repeat(2,1fr);gap:0;row-gap:2rem}
-      .proof-cell{border-right:none;border-bottom:1px solid var(--line);padding-bottom:1.5rem}
-      .proof-cell:nth-last-child(-n+2){border-bottom:none}
-      .proof-cell:nth-child(odd){border-right:1px solid var(--line)}
+    @media(max-width:780px){
+      .caps{grid-template-columns:repeat(2,1fr);gap:32px 0;max-width:520px}
+      .cap{border-right:none;padding:0 16px}
+      .cap:nth-child(odd){border-right:1px solid var(--line)}
     }
-    @media(max-width:480px){
-      .proof-grid{grid-template-columns:1fr}
-      .proof-cell{border-right:none !important;border-bottom:1px solid var(--line);padding:1.5rem 0}
-      .proof-cell:last-child{border-bottom:none}
-    }
-
-    /* ══════════════ SECTION 3 — POSITIONING ══════════════ */
-    .positioning .grid{
-      display:grid;grid-template-columns:40fr 55fr;gap:5%;align-items:start;
-    }
-    .positioning .left .eyebrow{margin-bottom:1.5rem}
-    .positioning .right p{
-      font-size:1.05rem;line-height:1.7;color:var(--ink-secondary);max-width:580px;
-    }
-    .positioning .right p + p{margin-top:1.5rem}
-    @media(max-width:820px){
-      .positioning .grid{grid-template-columns:1fr;gap:2.5rem}
+    @media(max-width:440px){
+      .caps{grid-template-columns:1fr;gap:28px}
+      .cap{border-right:none !important;border-bottom:1px solid var(--line);padding-bottom:28px}
+      .cap:last-child{border-bottom:none}
     }
 
-    /* ══════════════ SECTION 4 — CAPABILITIES (process flow) ══════════════ */
-    .capabilities{background:var(--bg-cream-soft)}
-    .section-head{text-align:center;max-width:680px;margin:0 auto 4rem}
-    .section-head .eyebrow{margin-bottom:1.25rem}
-    .section-head h2{margin-bottom:1.25rem}
-    .section-head .subhead{margin:0 auto;max-width:580px}
-    .flow{
-      display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;gap:0.75rem;
-      align-items:stretch;
+    /* ══════════════ INFO BAR (offices + contact) ══════════════ */
+    .info-bar{
+      background:var(--cream-soft);
+      border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+      padding:24px clamp(22px,4vw,48px);
+      display:flex;align-items:center;justify-content:center;gap:clamp(24px,5vw,64px);flex-wrap:wrap;
+      animation:fadeUp 1s 0.55s ease both;
     }
-    .stage{
-      background:var(--bg-white);border-radius:4px;padding:2rem;
-      display:flex;flex-direction:column;gap:0.85rem;
+    .offices{display:flex;align-items:center;gap:clamp(20px,3vw,40px);flex-wrap:wrap;justify-content:center}
+    .offices-label{
+      font-family:var(--sans);font-weight:600;font-size:10px;
+      letter-spacing:0.24em;text-transform:uppercase;color:var(--ink-muted);
     }
-    .stage-num{
-      font-family:var(--serif);font-weight:500;font-size:2.5rem;
-      color:var(--sage-deep);line-height:1;
+    .office{display:flex;flex-direction:column;align-items:center;gap:2px;text-align:center}
+    .office-name{
+      font-family:var(--sans);font-weight:600;font-size:11px;
+      letter-spacing:0.16em;text-transform:uppercase;color:var(--ink);line-height:1.3;
     }
-    .stage-name{
-      font-family:var(--serif);font-weight:500;font-size:1.5rem;
-      color:var(--ink-primary);letter-spacing:0.01em;
+    .office-country{
+      font-family:var(--sans);font-weight:400;font-size:9.5px;
+      letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-muted);
     }
-    .stage-desc{
-      font-family:var(--sans);font-weight:400;font-size:0.92rem;
-      color:var(--ink-secondary);line-height:1.6;
+    .contact-cluster{display:flex;flex-direction:column;gap:6px}
+    .contact-row{
+      display:flex;align-items:center;gap:8px;
+      font-family:var(--sans);font-weight:500;font-size:13px;color:var(--ink);
     }
-    .arrow{
-      display:flex;align-items:center;justify-content:center;
-      color:var(--sage-mid);font-size:1.5rem;font-weight:300;
+    .contact-row a{color:var(--ink);transition:color 0.15s ease}
+    .contact-row a:hover{color:var(--sage-deep)}
+    .contact-row .ico{
+      color:var(--sage-deep);display:inline-flex;align-items:center;justify-content:center;
+      flex-shrink:0;
     }
-    .flow-closing{
-      text-align:center;margin-top:3rem;
-      font-family:var(--serif);font-style:italic;font-weight:400;
-      font-size:1.1rem;color:var(--ink-secondary);
+    .contact-row .ico svg{width:14px;height:14px}
+
+    /* ══════════════ FOOTER BAND ══════════════ */
+    footer.band{
+      background:var(--sage-deep);color:var(--cream);
+      padding:18px 22px;text-align:center;
+      font-family:var(--sans);font-weight:500;font-size:11.5px;
+      letter-spacing:0.3em;text-transform:uppercase;
     }
-    @media(max-width:980px){
-      .flow{grid-template-columns:1fr;gap:0.75rem}
-      .arrow{transform:rotate(90deg);padding:0.5rem 0}
+    footer.band .accent-text{color:var(--accent)}
+    footer.band .dot{
+      display:inline-block;width:3px;height:3px;background:rgba(242,237,227,0.4);
+      border-radius:50%;margin:0 14px;vertical-align:middle;
     }
 
-    /* ══════════════ SECTION 5 — INDUSTRIES ══════════════ */
-    .industries .lead{
-      text-align:center;max-width:640px;margin:0 auto 3.5rem;
-      font-size:1.05rem;color:var(--ink-secondary);line-height:1.7;
-    }
-    .industries-grid{
-      display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;
-    }
-    .industry-card{
-      background:var(--bg-white);border:1px solid var(--line);border-radius:4px;
-      padding:2.5rem;position:relative;
-      transition:transform 200ms ease,border-color 200ms ease;
-      display:flex;flex-direction:column;gap:1rem;min-height:200px;
-    }
-    .industry-card:hover{transform:translateY(-2px);border-color:var(--sage-soft)}
-    .industry-name{
-      font-family:var(--serif);font-weight:500;font-size:1.5rem;
-      color:var(--ink-primary);line-height:1.25;letter-spacing:0.005em;
-    }
-    .industry-desc{
-      font-family:var(--sans);font-weight:400;font-size:0.95rem;
-      color:var(--ink-secondary);line-height:1.65;
-    }
-    .industry-arrow{
-      position:absolute;right:1.75rem;bottom:1.5rem;
-      color:var(--sage-mid);font-size:1.25rem;
-      transition:transform 200ms ease,color 200ms ease;
-    }
-    .industry-card:hover .industry-arrow{color:var(--sage-deep);transform:translateX(3px)}
-    @media(max-width:820px){.industries-grid{grid-template-columns:1fr}}
-
-    /* ══════════════ SECTION 6 — CLOSING BANNER ══════════════ */
-    .closing{
-      position:relative;overflow:hidden;color:var(--bg-cream);
-      padding:6rem 0;
-    }
-    .closing-bg{
-      position:absolute;inset:0;z-index:1;
-      background:
-        linear-gradient(to right,rgba(42,45,36,0.78),rgba(42,45,36,0.58)),
-        linear-gradient(180deg,#3D4530 0%,#2A2D24 100%);
-    }
-    .closing-bg::before{
-      content:'';position:absolute;inset:0;
-      background-image:radial-gradient(circle,rgba(242,237,227,0.16) 1.2px,transparent 1.5px);
-      background-size:24px 24px;
-      mask-image:linear-gradient(135deg,#000 0%,transparent 80%);
-      -webkit-mask-image:linear-gradient(135deg,#000 0%,transparent 80%);
-    }
-    .closing-inner{position:relative;z-index:2;text-align:center;max-width:760px;margin:0 auto}
-    .closing h2{
-      font-family:var(--serif);font-weight:400;color:var(--bg-cream);
-      font-size:clamp(2rem,3.5vw,3rem);line-height:1.1;letter-spacing:-0.005em;
-      margin-bottom:1.5rem;
-    }
-    .closing .subhead{
-      color:rgba(242,237,227,0.85);max-width:560px;margin:0 auto 2.25rem;
-      font-weight:400;
-    }
-
-    /* ══════════════ SECTION 7 — CONTACT BAND ══════════════ */
-    .contact-band{background:var(--bg-cream-soft)}
-    .contact-grid{
-      display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;
-    }
-    .contact-left .eyebrow{margin-bottom:1.25rem}
-    .contact-left h2{margin-bottom:1.25rem}
-    .contact-left .caption{
-      font-size:1rem;color:var(--ink-secondary);line-height:1.65;max-width:420px;
-    }
-    .contact-methods{display:flex;flex-direction:column;gap:1.5rem;margin-bottom:2rem}
-    .contact-method{
-      display:flex;align-items:center;gap:1rem;
-    }
-    .contact-icon{
-      width:42px;height:42px;background:var(--bg-white);border:1px solid var(--line);
-      border-radius:4px;display:inline-flex;align-items:center;justify-content:center;
-      color:var(--sage-deep);flex-shrink:0;
-    }
-    .contact-icon svg{width:18px;height:18px}
-    .contact-info-block .lbl{
-      font-family:var(--sans);font-weight:500;font-size:0.7rem;
-      letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-muted);
-      display:block;margin-bottom:0.25rem;
-    }
-    .contact-info-block .val{
-      font-family:var(--sans);font-weight:500;font-size:1rem;color:var(--ink-primary);
-    }
-    @media(max-width:820px){
-      .contact-grid{grid-template-columns:1fr;gap:2.5rem}
-    }
-
-    /* ══════════════ FOOTER ══════════════ */
-    footer.site{background:var(--bg-cream);border-top:1px solid var(--line);padding:2.5rem 0}
-    .footer-inner{
-      display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem;align-items:center;
-    }
-    .footer-left{display:flex;align-items:center;gap:0.7rem}
-    .footer-left .logo-img{height:38px}
-    .footer-center{
-      text-align:center;font-family:var(--sans);font-weight:500;font-size:0.7rem;
-      letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-muted);
-    }
-    .footer-right{display:flex;justify-content:flex-end;gap:1rem}
-    .footer-right a{
-      width:36px;height:36px;display:inline-flex;align-items:center;justify-content:center;
-      color:var(--sage-mid);border:1px solid var(--line);border-radius:4px;
-      transition:color 150ms ease,border-color 150ms ease;
-    }
-    .footer-right a:hover{color:var(--sage-deep);border-color:var(--sage-deep)}
-    .footer-right svg{width:16px;height:16px}
-    @media(max-width:760px){
-      .footer-inner{grid-template-columns:1fr;gap:1.5rem;text-align:center}
-      .footer-left{justify-content:center}
-      .footer-right{justify-content:center}
-    }
-
-    /* ── Scroll reveal ── */
-    [data-reveal]{
-      opacity:0;transform:translateY(12px);
-      transition:opacity 600ms var(--ease),transform 600ms var(--ease);
-    }
-    [data-reveal].in{opacity:1;transform:translateY(0)}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
   </style>
 </head>
 <body>
 
-  <!-- ══════════════ HEADER ══════════════ -->
-  <header class="site" id="siteHeader">
-    <div class="header-inner">
-      <a href="#" class="logo-lockup" aria-label="Sartori Group — home">
-        <img class="logo-img" src="logos/sartorigrouplogo.jpeg" alt="Sartori Group" />
-      </a>
-      <nav class="primary" id="primaryNav">
-        <a href="#hero">Home</a>
-        <a href="#positioning">About</a>
-        <a href="#capabilities">Capabilities</a>
-        <a href="#network">Our Network</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a href="https://app.gruposartori.net" class="backoffice" aria-label="Backoffice access">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        <span>Backoffice Access</span>
-      </a>
-      <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">☰</button>
-    </div>
-  </header>
+  <nav class="top" id="nav">
+    <a href="#" class="nav-logo" aria-label="Sartori Group">
+      <img src="logos/sartorigrouplogo.png" alt="Sartori Group" />
+    </a>
+    <a href="https://app.gruposartori.net" class="backoffice" aria-label="Backoffice access">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      <span>Backoffice Access</span>
+    </a>
+  </nav>
 
-  <!-- ══════════════ SECTION 1 — HERO ══════════════ -->
-  <section class="hero" id="hero">
-    <div class="hero-bg" aria-hidden="true"></div>
-    <div class="wrap hero-inner">
-      <div class="hero-text">
-        <h1 class="hero-headline">
-          <span class="word">One</span> <span class="word">partner.</span>
-          <span class="word">The</span> <span class="word">whole</span> <span class="word accent">chain.</span>
-          <span class="word">Run</span> <span class="word">by</span> <span class="word">operators.</span>
-        </h1>
-        <p class="subhead">Sourcing, machinery, procurement, and logistics — end to end. Built by a global network of operating businesses, not by intermediaries.</p>
-        <div class="hero-buttons">
-          <a href="#capabilities" class="btn btn-primary">Explore Capabilities →</a>
-          <a href="#contact" class="btn btn-secondary">Request Consultation</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  <main class="hero">
+    <h1>
+      <span class="line">Global Solutions.</span>
+      <span class="line">Real Connections.</span>
+    </h1>
+    <div class="divider"></div>
+    <div class="eyebrow">Global Sourcing · Industrial Solutions · Operational Excellence</div>
+    <p class="lede">We connect businesses to the right products, equipment, and partners worldwide — driving growth at every step.</p>
 
-  <!-- ══════════════ SECTION 2 — PROOF STRIP ══════════════ -->
-  <section class="proof" aria-label="Proof points">
-    <div class="wrap">
-      <div class="proof-grid" data-reveal>
-        <div class="proof-cell">
-          <div class="proof-num">15+</div>
-          <div class="proof-label">Operating<br/>Companies</div>
-        </div>
-        <div class="proof-cell">
-          <div class="proof-num">$2M+</div>
-          <div class="proof-label">Avg Annual<br/>Revenue per Co.</div>
-        </div>
-        <div class="proof-cell">
-          <div class="proof-num">4</div>
-          <div class="proof-label">Continents<br/>Served</div>
-        </div>
-        <div class="proof-cell">
-          <div class="proof-num">Global</div>
-          <div class="proof-label">Supplier<br/>Network</div>
-        </div>
+    <div class="caps">
+      <div class="cap">
+        <span class="cap-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+        </span>
+        <div class="cap-title">Global Sourcing</div>
+        <div class="cap-desc">Trusted suppliers.<br/>Worldwide reach.</div>
       </div>
-      <p class="proof-caption" data-reveal>Real operations. Real scale. Real on-the-ground experience.</p>
+      <div class="cap">
+        <span class="cap-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        </span>
+        <div class="cap-title">Machinery &amp; Equipment</div>
+        <div class="cap-desc">Quality machines.<br/>Reliable performance.</div>
+      </div>
+      <div class="cap">
+        <span class="cap-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </span>
+        <div class="cap-title">Business Supply Solutions</div>
+        <div class="cap-desc">Everything your business<br/>needs to operate.</div>
+      </div>
+      <div class="cap">
+        <span class="cap-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </span>
+        <div class="cap-title">Logistics &amp; Procurement</div>
+        <div class="cap-desc">End-to-end support.<br/>Delivered efficiently.</div>
+      </div>
     </div>
-  </section>
+  </main>
 
-  <!-- ══════════════ SECTION 3 — POSITIONING ══════════════ -->
-  <section class="positioning" id="positioning">
-    <div class="wrap">
-      <div class="grid">
-        <div class="left" data-reveal>
-          <div class="eyebrow">Why Sartori Group</div>
-          <h2 class="section-headline">Built by operators, not intermediaries.</h2>
-        </div>
-        <div class="right" data-reveal>
-          <p>Sartori Group is an operating group. We run manufacturing, packaging, distribution, and supply businesses across four continents, which is why we can stand up yours.</p>
-          <p>When you engage us, you're not hiring a middleman who calls a supplier on your behalf. You're partnering with people who already know the supplier, the equipment, the freight lane, and the failure modes.</p>
-        </div>
+  <div class="info-bar">
+    <div class="offices">
+      <div class="offices-label">Our Offices</div>
+      <div class="office">
+        <div class="office-name">Santiago</div>
+        <div class="office-country">Dominican Republic</div>
+      </div>
+      <div class="office">
+        <div class="office-name">Fort Lauderdale</div>
+        <div class="office-country">USA</div>
+      </div>
+      <div class="office">
+        <div class="office-name">Guangzhou</div>
+        <div class="office-country">China</div>
       </div>
     </div>
-  </section>
+    <div class="contact-cluster">
+      <div class="contact-row">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+        <a href="mailto:contact@gruposartori.net">contact@gruposartori.net</a>
+      </div>
+      <div class="contact-row">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+        <a href="https://wa.me/18293449494" target="_blank" rel="noopener">+1 (829) 344-9494</a>
+      </div>
+    </div>
+  </div>
 
-  <!-- ══════════════ SECTION 4 — CAPABILITIES ══════════════ -->
-  <section class="capabilities" id="capabilities">
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <div class="eyebrow">What we do</div>
-        <h2 class="section-headline">One engagement. The full chain.</h2>
-        <p class="subhead">We don't hand you off between providers. We run the operation from supplier to your door.</p>
-      </div>
-      <div class="flow" data-reveal>
-        <div class="stage">
-          <div class="stage-num">01</div>
-          <div class="stage-name">Source</div>
-          <p class="stage-desc">Global supplier vetting and procurement across four continents. We find, qualify, and negotiate.</p>
-        </div>
-        <div class="arrow" aria-hidden="true">→</div>
-        <div class="stage">
-          <div class="stage-num">02</div>
-          <div class="stage-name">Equip</div>
-          <p class="stage-desc">Industrial machinery, production lines, and equipment — sourced, shipped, installed, and serviced.</p>
-        </div>
-        <div class="arrow" aria-hidden="true">→</div>
-        <div class="stage">
-          <div class="stage-num">03</div>
-          <div class="stage-name">Supply</div>
-          <p class="stage-desc">Raw materials, packaging, consumables, and operational supply at scale and on schedule.</p>
-        </div>
-        <div class="arrow" aria-hidden="true">→</div>
-        <div class="stage">
-          <div class="stage-num">04</div>
-          <div class="stage-name">Deliver</div>
-          <p class="stage-desc">International freight, customs, and on-the-ground logistics through our regional network.</p>
-        </div>
-      </div>
-      <p class="flow-closing" data-reveal>Engage us for one stage or all four. Either way, you have one partner.</p>
-    </div>
-  </section>
-
-  <!-- ══════════════ SECTION 5 — INDUSTRIES ══════════════ -->
-  <section class="industries" id="network">
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <div class="eyebrow">Industries we operate in</div>
-        <h2 class="section-headline">We don't serve industries. We operate in them.</h2>
-      </div>
-      <p class="lead" data-reveal>Our network runs businesses across these sectors. That means when you source machinery, supplies, or logistics through us, you're working with people who've already built and operated in your category.</p>
-      <div class="industries-grid">
-        <div class="industry-card" data-reveal>
-          <div class="industry-name">Plastics, Packaging &amp; Industrial Manufacturing</div>
-          <p class="industry-desc">Production lines, raw materials, machinery, and finished-goods supply. Deep operational experience across injection, extrusion, and packaging operations.</p>
-          <span class="industry-arrow" aria-hidden="true">→</span>
-        </div>
-        <div class="industry-card" data-reveal>
-          <div class="industry-name">Distribution &amp; Wholesale Supply</div>
-          <p class="industry-desc">Sourcing, warehousing, and multi-country distribution of consumables, equipment, and operational materials at scale.</p>
-          <span class="industry-arrow" aria-hidden="true">→</span>
-        </div>
-        <div class="industry-card" data-reveal>
-          <div class="industry-name">Hospitality, Retail &amp; Lifestyle</div>
-          <p class="industry-desc">Procurement and supply solutions for businesses scaling across the Caribbean and Latin America — from product sourcing to last-mile delivery.</p>
-          <span class="industry-arrow" aria-hidden="true">→</span>
-        </div>
-        <div class="industry-card" data-reveal>
-          <div class="industry-name">Cross-Border Operations</div>
-          <p class="industry-desc">Customs, freight, and on-the-ground operational support across the Americas, the Caribbean, and our global supplier network.</p>
-          <span class="industry-arrow" aria-hidden="true">→</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════ SECTION 6 — CLOSING BANNER ══════════════ -->
-  <section class="closing">
-    <div class="closing-bg" aria-hidden="true"></div>
-    <div class="wrap closing-inner">
-      <h2 data-reveal>We don't broker deals. We build operations.</h2>
-      <p class="subhead" data-reveal>Talk to us about what you're trying to stand up.</p>
-      <div data-reveal>
-        <a href="#contact" class="btn btn-inverted">Request Consultation →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════ SECTION 7 — CONTACT BAND ══════════════ -->
-  <section class="contact-band" id="contact">
-    <div class="wrap">
-      <div class="contact-grid">
-        <div class="contact-left" data-reveal>
-          <div class="eyebrow">Ready to grow?</div>
-          <h2 class="section-headline">Let's build smarter operations.</h2>
-          <p class="caption">Tell us what you need. We'll take care of the rest.</p>
-        </div>
-        <div class="contact-right" data-reveal>
-          <div class="contact-methods">
-            <div class="contact-method">
-              <span class="contact-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-              </span>
-              <div class="contact-info-block">
-                <span class="lbl">WhatsApp</span>
-                <a class="val" href="https://wa.me/18293449494" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">+1 (829) 344-9494</a>
-              </div>
-            </div>
-            <div class="contact-method">
-              <span class="contact-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              </span>
-              <div class="contact-info-block">
-                <span class="lbl">Email</span>
-                <span class="val">info@gruposartori.com</span>
-              </div>
-            </div>
-          </div>
-          <a href="mailto:info@gruposartori.com" class="btn btn-primary">Request Consultation →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════ FOOTER ══════════════ -->
-  <footer class="site">
-    <div class="wrap">
-      <div class="footer-inner">
-        <div class="footer-left">
-          <img class="logo-img" src="logos/sartorigrouplogo.jpeg" alt="Sartori Group" />
-        </div>
-        <div class="footer-center">© <span id="yr"></span> Sartori Group. All rights reserved.</div>
-        <div class="footer-right">
-          <a href="#" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
-          </a>
-          <a href="#" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
-          <a href="mailto:info@gruposartori.com" aria-label="Email">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
+  <footer class="band">
+    One Group.<span class="dot"></span><span class="accent-text">Global Reach.</span><span class="dot"></span>Endless Possibilities.
   </footer>
 
   <script>
-    // Year
-    document.getElementById('yr').textContent=new Date().getFullYear();
-
-    // Header background after scroll
-    const hdr=document.getElementById('siteHeader');
-    const onScroll=()=>hdr.classList.toggle('scrolled',window.scrollY>40);
+    const navEl=document.getElementById('nav');
+    const onScroll=()=>navEl.classList.toggle('scrolled',window.scrollY>20);
     window.addEventListener('scroll',onScroll,{passive:true});onScroll();
-
-    // Mobile menu
-    const menuBtn=document.getElementById('menuBtn');
-    menuBtn.addEventListener('click',()=>{
-      const open=hdr.classList.toggle('menu-open');
-      menuBtn.setAttribute('aria-expanded',open?'true':'false');
-    });
-    document.querySelectorAll('nav.primary a').forEach(a=>a.addEventListener('click',()=>{
-      hdr.classList.remove('menu-open');menuBtn.setAttribute('aria-expanded','false');
-    }));
-
-    // Hero entrance
-    window.addEventListener('load',()=>{
-      document.querySelector('.hero').classList.add('loaded');
-      // Word-stagger via CSS variable on each .word
-      const words=document.querySelectorAll('.hero h1 .word');
-      words.forEach((w,i)=>w.style.transitionDelay=(i*60)+'ms');
-    });
-
-    // Scroll reveal
-    const io=new IntersectionObserver(es=>es.forEach(e=>{
-      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
-    }),{threshold:0.2,rootMargin:'0px 0px -40px 0px'});
-    document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
   </script>
 </body>
 </html>
